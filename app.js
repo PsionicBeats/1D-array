@@ -2,6 +2,7 @@
 * Demonstrates array declarions by storing single variables into an array.
 *
 * Return	Cars (array), Cars length	
+* Tip - console.log() EVERYTHING.
 */
 function cars(){
 	var car1 = "Toyota";
@@ -10,12 +11,15 @@ function cars(){
 
 	//Create an array declaration named cars and set each car variable as the values.
 	var cars = [car1, car2, car3];
+
 	//Print the created array
 	console.log(cars);
+
 	//Print the array length
 	console.log(cars.length);
+
 	//Return the created array and the array length
-	return;
+	return cars;
 }
 
 console.log(cars());
@@ -26,6 +30,7 @@ console.log(cars());
 * Parameters 	food (string), drink (string), dessert (string)
 * Return 	An order as a complete sentence represented as a string
 */
+
 function order(food, drink, dessert){
 	//Store the parameters in an array called "order"
 	var order = [food, drink, dessert];
@@ -60,15 +65,18 @@ var currentClasses = [
 */
 function loopToChange(classes){
 	//Print the parameter that is being passed through the function
-	console.log(classes);
 
 	//Use a For loop to iterate through each value in the passed array
-	for (var i = classes.length - 1; i >= 0; i--) {
-		console.log(classes[i]);
+	for (var i = 0; i < classes.length; i++) {
+		// console.log(classes[i]);
+		// if (classes[i] === "Band") {
+		// 	classes[i] = "Computer Science";
+		// };
 	};
 
+	// console.log(classes);
 	//Return classes
-	return;
+	return classes;
 }
 
 console.log(loopToChange(currentClasses));
@@ -83,14 +91,17 @@ function arrayMethodToLoop(numbers){
 	//Print the parameter that is being passed through the function
 
 	//Use the forEach() method to add 5 to each value in the passed array
+	// *Note: forEach() is good to see all the values in the array
 
+	console.log(numbers);
 
-	numbers.forEach(function(curr) {
+	numbers.forEach(function(number) {
+		console.log(number);
 		// console.log('my current value', curr);
 		// console.log('my index', index);
 		// console.log('my array', arr);
 
-		var current = curr + 5;
+		// var current = curr + 5;
 		// console.log(curr + 5);
 	
 		// var splices = numbers.splice(numbers.length);
@@ -99,7 +110,7 @@ function arrayMethodToLoop(numbers){
 		// var name = splices.push(curr + 5);
 		// console.log(name);
 
-	})
+	});
 
 
 
@@ -117,25 +128,33 @@ console.log(arrayMethodToLoop([5 + 1, 3]));
 */
 function moreArrayMethods(priorities){
 	//Print the parametersmeter that is being passed through the function
-	console.log(moreArrayMethods);
+	console.log(priorities);
+	//Use the method sort() to sort your priorities
+	// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+	priorities.sort();
+
+
+
+	//Use the method indexOf() to replace "Not Going to Class" to "Going to Class"
+	//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf
+	//https://gist.github.com/ourmaninamsterdam/1be9a5590c9cf4a0ab42#user-content-overwrite-item-at-a-specific-index
+	var indexNumber = priorities.indexOf("Not Going to Class");
+
+	priorities.indexOf("Not Going to Class");
+
+	console.log(indexNumber);
+
+	//USE THIS TO REPLACE ITEM OMG!
+	priorities[indexNumber] = "Going to Class";
 
 	//Use the method pop() to remove the item at the end of the array
 	// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop
 	priorities.pop();
 
-	//Use the method indexOf() to replace "Not Going to Class" to "Going to Class"
-	//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf
-	//https://gist.github.com/ourmaninamsterdam/1be9a5590c9cf4a0ab42#user-content-overwrite-item-at-a-specific-index
-	// priorities.indexOf("Not Going to Class");
-
-	
 	//Use the method push() to add a priority that is important to the success of this class and don't forget to sort() them afterwards!
 	//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push
-	priorities.push("Review Notes", "Going to Class");
+	priorities.push("Take Medicine");
 
-	//Use the method sort() to sort your priorities
-	// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
-	priorities.sort();
 
 	//Return the changed array
 	return priorities;
