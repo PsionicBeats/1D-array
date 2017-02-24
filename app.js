@@ -124,7 +124,9 @@ function moreArrayMethods(priorities){
 	priorities.pop();
 
 	//Use the method indexOf() to replace "Not Going to Class" to "Going to Class"
-	priorities.indexOf("Not Going to Class", "Going to Class");
+	//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf
+	//https://gist.github.com/ourmaninamsterdam/1be9a5590c9cf4a0ab42#user-content-overwrite-item-at-a-specific-index
+	// priorities.indexOf("Not Going to Class");
 
 	
 	//Use the method push() to add a priority that is important to the success of this class and don't forget to sort() them afterwards!
