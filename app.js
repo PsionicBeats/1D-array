@@ -116,18 +116,27 @@ console.log(arrayMethodToLoop([5 + 1, 3]));
 * Return 	priorties (array)
 */
 function moreArrayMethods(priorities){
-	//Print the parameter that is being passed through the function
-
-	//Use the method sort() to sort your priorities
-
-	//Use the method indexOf() to replace "Not Going to Class" to "Going to Class"
+	//Print the parametersmeter that is being passed through the function
+	console.log(moreArrayMethods);
 
 	//Use the method pop() to remove the item at the end of the array
+	// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop
+	priorities.pop();
 
+	//Use the method indexOf() to replace "Not Going to Class" to "Going to Class"
+	priorities.indexOf("Not Going to Class", "Going to Class");
+
+	
 	//Use the method push() to add a priority that is important to the success of this class and don't forget to sort() them afterwards!
+	//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push
+	priorities.push("Review Notes", "Going to Class");
+
+	//Use the method sort() to sort your priorities
+	// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+	priorities.sort();
 
 	//Return the changed array
-	return;
-}
+	return priorities;
+};
 
 console.log(moreArrayMethods(["Zero Play", "Sleeping", "HW", "Work", "School", "Planning For Future", "Not Going to Class"]));
